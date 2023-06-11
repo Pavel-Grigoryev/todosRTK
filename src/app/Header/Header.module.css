@@ -1,0 +1,17 @@
+.appbar {
+    position: fixed;
+    height: 120px;
+    background-color: var(--palette-secondary)!important;
+    box-shadow: none!important;
+}
+
+.toolbar {
+    justify-content: center;
+    position: relative;
+    min-height: 120px!important;
+    color: var(--palette-third);
+    font-size: 5rem;
+    font-weight: 300;
+
+}
+
