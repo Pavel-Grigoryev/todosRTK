@@ -3,12 +3,12 @@
 }
 
 :root {
-  --palette-primary: #ffffff;
-  --palette-secondary: #eeeeee;
+  --palette-primary: #eeeeee;
+  --palette-secondary: #888B8D;
   --palette-third: #ea9999;
   --palette-fourth: #000000;
-  --palette-fifth: #FBBF23;
-  --palette-sixth: #61A5FA;
+  --palette-fifth: red;
+  --palette-sixth: #ffffff;
 }
 
 html {
@@ -17,11 +17,11 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--palette-secondary);
+  background-color: var(--palette-primary);
   color: var(--palette-fourth);
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
 }
 

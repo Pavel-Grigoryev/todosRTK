@@ -1,0 +1,12 @@
+.paper {
+   padding: 20px 0;
+}
+
+.addTaskBlock {
+   padding: 0 20px;
+   border-bottom: 2px solid var(--palette-secondary);
+}
+
+.tasksList {
+   padding: 20px 0 0;
+}
