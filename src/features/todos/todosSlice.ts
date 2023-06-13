@@ -7,9 +7,25 @@ export enum TasksStatuses {
 export const slice = createSlice({
   name: "todos",
   initialState: {
-    filter: "all" as FilterValuesType,
-    tasks: [] as TaskType[],
-  },
+    filter: "all",
+    tasks: [
+      {
+        id: nanoid(),
+        title: "Тестовое задание",
+        status: TasksStatuses.InProgress,
+      },
+      {
+        id: nanoid(),
+        title: "Прекрасный код",
+        status: TasksStatuses.Completed,
+      },
+      {
+        id: nanoid(),
+        title: "Покрытие тестами",
+        status: TasksStatuses.Completed,
+      },
+    ],
+  } as TasksStateType,
   reducers: {
     addTask: (state, action: PayloadAction<{ title: string }>) => {
       state.tasks.unshift({
@@ -61,3 +77,8 @@ export type TaskType = {
 type TaskUpdateType = Partial<Omit<TaskType, "id">>;
 
 export type FilterValuesType = "all" | "active" | "completed";
+
+export type TasksStateType = {
+  filter: FilterValuesType;
+  tasks: TaskType[];
+};
