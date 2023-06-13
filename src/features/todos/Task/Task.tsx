@@ -7,6 +7,8 @@ import { TasksStatuses, TaskType } from "features/todos/todosSlice";
 import { todosActions } from "features/todos/index";
 import { useActions } from "common/hooks/useActions";
 import { EditableSpan } from "common/components/EditableSpan";
+import s from "./Task.module.css";
+import cn from "classnames";
 
 export type PropsType = {
   task: TaskType;
@@ -44,12 +46,9 @@ export const Task: FC<PropsType> = memo(({ task }) => {
 
   return (
     <ListItem
-      className={task.status === TasksStatuses.Completed ? "is-done" : ""}
-      style={{
-        textDecoration:
-          task.status === TasksStatuses.Completed ? "line-through" : "none",
-        justifyContent: "flex-start",
-      }}
+      className={cn(s.listItem, {
+        [s.isDone]: TasksStatuses.Completed === task.status,
+      })}
     >
       <Checkbox
         onChange={onChangeTaskStatusHandler}
@@ -61,6 +60,7 @@ export const Task: FC<PropsType> = memo(({ task }) => {
         value={task.title}
         onChange={onChangeTaskTitleHandler}
         spanStyle={{ flexGrow: "1" }}
+        styleSX={{ flexGrow: "1" }}
       />
       <IconButton onClick={removeTaskHandler} size="small">
         <DeleteOutlineOutlinedIcon style={{ width: "20px" }} />

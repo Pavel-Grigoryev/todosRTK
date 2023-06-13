@@ -49,7 +49,7 @@ export const AddItemForm: FC<AddItemFormPropsType> = memo(
           color={"secondary"}
         />
 
-        <IconButton onClick={addTask}>
+        <IconButton onClick={addTask} className={s.button}>
           <AddIcon />
         </IconButton>
         {error && <div className={s.errorMessage}>{error}</div>}

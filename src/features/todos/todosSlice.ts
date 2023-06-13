@@ -36,6 +36,17 @@ export const slice = createSlice({
         tasks.splice(index, 1);
       }
     },
+    changeFilter: (
+      state,
+      action: PayloadAction<{ filter: FilterValuesType }>
+    ) => {
+      state.filter = action.payload.filter;
+    },
+    clearCompletedtask: (state) => {
+      state.tasks = state.tasks.filter(
+        (task) => task.status !== TasksStatuses.Completed
+      );
+    },
   },
 });
 

@@ -8,7 +8,7 @@ export const selectFilteredTasks = createSelector(
   [selectTasks, selectFilter],
   (tasks, filter) => {
     if (filter === "active") {
-      return tasks.filter((task) => task.status === TasksStatuses.Completed);
+      return tasks.filter((task) => task.status === TasksStatuses.InProgress);
     }
     if (filter === "completed") {
       return tasks.filter((task) => task.status === TasksStatuses.Completed);

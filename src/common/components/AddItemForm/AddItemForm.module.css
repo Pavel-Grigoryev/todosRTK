@@ -1,6 +1,12 @@
 .block {
     position: relative;
     padding-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    padding: 8px 0 8px 10px;
 }
 
 .errorMessage {

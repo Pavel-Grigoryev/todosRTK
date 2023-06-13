@@ -10,3 +10,11 @@
 .tasksList {
    padding: 20px 0 0;
 }
+
+.buttonsBlock {
+   padding: 20px 20px 0;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 15px;
+}

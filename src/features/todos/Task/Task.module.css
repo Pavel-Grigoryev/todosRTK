@@ -1,0 +1,8 @@
+.listItem {
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--palette-secondary);
+}
+
+.isDone {
+    text-decoration: line-through!important;
+}
